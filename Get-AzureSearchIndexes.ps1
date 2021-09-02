@@ -15,7 +15,7 @@ param (
 $azContext = Get-AzContext
 $allIndexStatistics = @()
 
-$dateStr = '{0:yyyyMMdd}' -f $Date
+$dateStr = '{0:yyyyMMdd}' -f $(Get-Date)
 
 if ($resourceGroupName) {
     $resourceGroups = @($resourceGroupName);
