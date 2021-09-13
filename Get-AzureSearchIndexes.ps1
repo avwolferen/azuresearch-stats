@@ -22,6 +22,7 @@ if ($resourceGroupName) {
     $resultFileName = Join-Path $outputDirectory "AzureSearchStatistics-$dateStr-$resourceGroupName.csv"
 }
 else {
+    # Example if you might want to filter our some resourcegroups
     #$resourceGroups = (Get-AzResourceGroup -Location 'West Europe' | Where-Object { $_.Tags.Platform -eq 'Sitecore' }).ResourceGroupName;
     $resourceGroups = (Get-AzResourceGroup).ResourceGroupName;
     $resultFileName = Join-Path $outputDirectory "AzureSearchStatistics-$dateStr-$($azContext.Subscription.Name).csv"
